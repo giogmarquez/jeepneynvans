@@ -51,6 +51,9 @@ jobs:
     - name: Install Dependencies
       run: composer install --prefer-dist --no-progress --no-interaction
 
+    - name: Check PHP Syntax (Lint)
+      run: find . -name "*.php" ! -path "./vendor/*" -print0 | xargs -0 -n 1 -P 8 php -l
+
     - name: Run Database Migrations
       run: php spark migrate
       env:
