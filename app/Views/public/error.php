@@ -2,14 +2,12 @@
 
 class TestClass {
     public function sayHello() {
-        echo "Hello World"
+        echo "Hello World";
     }
 
     public function add($a, $b) {
-        return $a + $b
+        return $a + $b;
     }
 }
 
-// missing closing bracket for class
-
-?>
+?>
